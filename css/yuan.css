@@ -32,22 +32,33 @@ body {
     margin:auto;
     padding-left:30px;
 }
-.light-off {
+.court {
     float:left;
     border:solid 1px gray;
-    background-image:url(../img/court.gif);
-    background-repeat:no-repeat;
     width:280px;
     height:268px;
 }
+.light-off {
+    background-position:0 0;
+}
 .light-on {
-    float:left;
-    border:solid 1px gray;
-    background-image:url(../img/court.gif);
-    background-repeat:no-repeat;
     background-position:-279px 0;
-    width:280px;
-    height:268px;
+}
+#court-northwest {
+    background-image:url(../img/court-northwest.png);
+    background-repeat:no-repeat;
+}
+#court-southwest {
+    background-image:url(../img/court-southwest.png);
+    background-repeat:no-repeat;
+}
+#court-northeast {
+    background-image:url(../img/court-northeast.png);
+    background-repeat:no-repeat;
+}
+#court-southeast {
+    background-image:url(../img/court-southeast.png);
+    background-repeat:no-repeat;
 }
 #footer {
     padding:10px inherit;
