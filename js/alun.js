@@ -15,34 +15,40 @@ $(document).ready(function() {
         }
     });
 
-    get_lighting('KanAllLights');
+    get_all_lighting_status();
 });
 
-get_lighting = function(group_name) {
+function get_all_lighting_status() {
     if (ajax)
        ajax.abort();
-    var params = {'GroupName': group_name,
-              'Function': 'GetGroupDevicesStatuses',
-              'User': username,
-              'Pass': password};
-    ajax = $.get(api_uri, params, function(response) {
-        var lights_array = response.split(';');
+    var params = {'group_name': 'KanAllLights'};
+    ajax = $.get('get-group-devices-statuses.php', params, function(response) {
         for (var i = 0; i < 36; i += 1) {
-            var light_status = lights_array[i].split(',')[1];
+            var light_status = response[i][1];
             if ((i + 1) < 10) {
-                var light_id = 'lighting0' + i;      
+                var light_id = '#lighting0' + (i + 1);      
             } else {
-                var light_id = 'lighting' + i;
+                var light_id = '#lighting' + (i + 1);
             }
-            if (light_status == '0')
+            if (light_status == '0') {
                 $(light_id).text('OFF');
-            else if (light_status == '1')
+                $(light_id).removeClass();
+                $(light_id).addClass('off');
+            } else if (light_status == '1') {
                 $(light_id).text('LOW');
-            else if (light_status == '2')
-                $(light_id).text('MEDIUM');
-            else
-                $(light_id).text('HIGH');
+                $(light_id).removeClass();
+                $(light_id).addClass('low');
+            } else if (light_status == '2') {
+                $(light_id).text('MED');
+                $(light_id).removeClass();
+                $(light_id).addClass('medium');
+            } else {
+                $(light_id).text('HI'); 
+                $(light_id).removeClass();
+                $(light_id).addClass('high');
+            }
         }
     });
+    var timer = setTimeout('get_all_lighting_status()', 3000);
 };
 
