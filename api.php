@@ -1,15 +1,22 @@
 <?php
-  function callApi($url, $params = array()) {
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Connection: Keep-Alive')); 
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Expect:' ) );
-    curl_setopt($ch, CURLOPT_URL, API_ROOT . $url);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-    $response = curl_exec($ch);
-    curl_close($ch);
+  define('BASE_URL', 'https://www.corisecs.com/GUI.php');
+  define('USER', 'kurteego1');
+  define('PASS', 'kurteego1');
 
-    return $response;
+  function callApi($func, $params = array()) {
+    $uri = BASE_URL . '?Function=' . $func;
+    foreach ($params as $k => $v) {
+      $uri .= ('&' . $k . '=' . $v);
+    }
+    $uri .= ('&User=' . USER);
+    $uri .= ('&Pass=' . PASS);
+
+    $handle = fopen($uri, 'rb');
+    $contents = '';
+    while(!feof($handle)) {
+      $contents .= fread($handle, 8192);
+    }
+
+    return $contents;
   }
 ?>

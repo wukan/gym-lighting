@@ -19,7 +19,7 @@
           <?php
             for ($i = 1; $i <= 36; $i++) {
           ?>
-            <div id="lighting<?=($i < 10) ? '0'.$i : $i?>" class="lighting">OFF</div>
+            <div id="lighting<?=($i < 10) ? '0'.$i : $i?>" class="off"><p>OFF</p></div>
           <?php } ?>
         </div> 
       </div>

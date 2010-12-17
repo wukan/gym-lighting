@@ -32,11 +32,22 @@ body {
     padding:10px inherit;
     margin-top: 10px;
 }
-.lighting {
+#lightings div {
     float:left;
     width:50px;
     height:35px;
     margin:5px;
-    background-color: #F30;
     padding-top: 15px 
+}
+.off {
+    background-color: #FFC;
+}
+.low {
+    background-color: #FF9;
+}
+.medium {
+    background-color: #FF6;
+}
+.high {
+    background-color: #FF0;
 }
