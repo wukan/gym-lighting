@@ -1,0 +1,55 @@
+* {
+    padding:0;
+    margin:0;
+}
+a, p, h1 {
+    color:#000;
+    text-decoration: none;
+}
+a:hover {
+    color:#09F;
+}
+body {
+    background:#FFF;
+}
+#container {
+    font-family:Vrinda, Arial, Helveticam, sans-serif;
+    text-align:center;
+    color:#330000;
+    width:960px;
+    margin:0 auto;
+}
+#header {
+    padding:10px inherit;
+}
+#content {
+    margin:0 auto;
+    height:560px;
+}
+#courts {
+    width:600px;
+    position:relative;
+    margin:auto;
+    padding-left:30px;
+}
+.light-off {
+    float:left;
+    border:solid 1px gray;
+    background-image:url(../img/court.gif);
+    background-repeat:no-repeat;
+    width:280px;
+    height:268px;
+}
+.light-on {
+    float:left;
+    border:solid 1px gray;
+    background-image:url(../img/court.gif);
+    background-repeat:no-repeat;
+    background-position:-279px 0;
+    width:280px;
+    height:268px;
+}
+#footer {
+    padding:10px inherit;
+}
+

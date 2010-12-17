@@ -1,0 +1,42 @@
+* {
+    padding:0;
+    margin:0;
+}
+a, p, h1 {
+    color:#000;
+    text-decoration: none;
+}
+a:hover {
+    color:#09F;
+}
+body {
+    background:#FFF;
+}
+#container {
+    font-family:Vrinda, Arial, Helveticam, sans-serif;
+    text-align:center;
+    color:#330000;
+    width:960px;
+    margin:0 auto;
+}
+#header {
+    padding:10px inherit;
+    margin-bottom: 10px;
+}
+#content {
+    margin: 0 auto;
+    width: 360px;
+}
+#footer {
+    clear: both;
+    padding:10px inherit;
+    margin-top: 10px;
+}
+.lighting {
+    float:left;
+    width:50px;
+    height:35px;
+    margin:5px;
+    background-color: #F30;
+    padding-top: 15px 
+}
