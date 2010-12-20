@@ -42,22 +42,22 @@ body {
     background-position:0 0;
 }
 .light-on {
-    background-position:-279px 0;
+    background-position:-280px 0;
 }
 #court-northwest {
-    background-image:url(../img/court-northwest.png);
+    background-image:url(../img/northwest-court.png);
     background-repeat:no-repeat;
 }
 #court-southwest {
-    background-image:url(../img/court-southwest.png);
+    background-image:url(../img/southwest-court.png);
     background-repeat:no-repeat;
 }
 #court-northeast {
-    background-image:url(../img/court-northeast.png);
+    background-image:url(../img/northeast-court.png);
     background-repeat:no-repeat;
 }
 #court-southeast {
-    background-image:url(../img/court-southeast.png);
+    background-image:url(../img/southeast-court.png);
     background-repeat:no-repeat;
 }
 #footer {
