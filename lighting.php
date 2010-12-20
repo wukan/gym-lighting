@@ -5,7 +5,7 @@
     <title>Gym Lighitng Status</title>
     <link href="css/yuan-lighting.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/alun.js"></script>
+    <script type="text/javascript" src="js/alun-lighting.js"></script>
   </head>
 
   <body>
