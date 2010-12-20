@@ -1,9 +1,5 @@
 var ajax = null;
 
-var api_uri = 'https://www.corisecs.com/GUI.php';
-var username = 'kurteego1';
-var password = 'kurteego1';
-
 $(document).ready(function() {
     $(".court").click(function() {
         if ($(this).hasClass("light-off")) {
