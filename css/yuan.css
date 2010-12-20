@@ -20,11 +20,12 @@ body {
     margin:0 auto;
 }
 #header {
+    margin-bottom:10px;
     padding:10px inherit;
 }
 #content {
     margin:0 auto;
-    height:560px;
+    position:relative;
 }
 #courts {
     width:600px;
@@ -60,7 +61,37 @@ body {
     background-image:url(../img/southeast-court.png);
     background-repeat:no-repeat;
 }
+.loader {
+    position:absolute;
+    display:none;
+}
+.loader img{
+    width:160%;
+}
+#loader-northwest {
+    left:120px;
+    top:60px;
+}
+#loader-northeast {
+    left:400px;
+    top:60px;
+}
+#loader-southwest {
+    left:120px;
+    top:340px;
+}
+#loader-southeast {
+    left:400px;
+    top:340px;
+}
+#label-here {
+    position:absolute;
+    margin-top:360px;
+    margin-left:760px;
+}
 #footer {
+    margin-top:10px;
     padding:10px inherit;
+    clear:both;
 }
 

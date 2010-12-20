@@ -18,13 +18,27 @@
         <div id="courts">
           <div id="court-northwest" class="court light-off">
           </div>
+          <div id="loader-northwest" class="loader">
+            <img src="img/ajax-loader.gif"></img>
+          </div>
           <div id="court-northeast" class="court light-off">
+          </div>
+          <div id="loader-northeast" class="loader">
+            <img src="img/ajax-loader.gif"></img>
           </div>
           <div id="court-southwest" class="court light-off">
           </div>
+          <div id="loader-southwest" class="loader">
+            <img src="img/ajax-loader.gif"></img>
+          </div>
           <div id="court-southeast" class="court light-off">
           </div>
+          <div id="loader-southeast" class="loader">
+            <img src="img/ajax-loader.gif"></img>
+          </div>
         </div>
+
+        <div id="label-here"><img src="img/here.jpg" width="40" height="192"/></div>
       </div>
 
       <div id="footer">
