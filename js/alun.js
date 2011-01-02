@@ -65,6 +65,12 @@ function set_group_mode(group_name, mode, group_id) {
     var params = {'group_name': group_name, 'mode': mode};
     $.get('set-group-mode.php', params, function(response) {
         // if fail something will happens here
+        /*
+        if (response == 0) {
+            
+        } else if (response == 2) [
+
+        }*/
     });
 }
 

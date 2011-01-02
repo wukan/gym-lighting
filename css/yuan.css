@@ -84,6 +84,11 @@ body {
     left:400px;
     top:340px;
 }
+#label-tip {
+    position:absolute;
+    margin-left:0px;
+    /*display:none;*/
+}
 #label-here {
     position:absolute;
     margin-top:360px;

@@ -38,6 +38,7 @@
           </div>
         </div>
 
+        <div id="label-tip"><img src="img/tip.jpg" /></div>
         <div id="label-here"><img src="img/here.jpg" width="40" height="192"/></div>
       </div>
 
