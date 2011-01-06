@@ -9,41 +9,76 @@
   </head>
   
   <body>
-    <div id="container">
-      <div id="header">
-        <h1>Join Dartmouth in conserving energy.</h1>
-      </div> 
+    <div id="wrapper">
+      <div id="header"></div> 
 
       <div id="content">
-        <div id="courts">
-          <div id="court-northwest" class="court light-off">
+        <div id="tips">
+          <div id="tips-header">Tips for use</div>
+          <div id="tips-content">
+            <ol>
+              <li>Turning lights on/off can take a bit of the time.</li>
+              <li>Wait a <span>1 minute</span> between operations on the same lights.</li>
+              <li>Questions? Ask us at <span>xx@dartmouth.edu</span>.</li>
+            </ol>
           </div>
-          <div id="loader-northwest" class="loader">
-            <img src="img/ajax-loader.gif" alt="Loading"></img>
-          </div>
-          <div id="court-northeast" class="court light-off">
-          </div>
-          <div id="loader-northeast" class="loader">
-            <img src="img/ajax-loader.gif" alt="Loading"></img>
-          </div>
-          <div id="court-southwest" class="court light-off">
-          </div>
-          <div id="loader-southwest" class="loader">
-            <img src="img/ajax-loader.gif" alt="Loading"></img>
-          </div>
-          <div id="court-southeast" class="court light-off">
-          </div>
-          <div id="loader-southeast" class="loader">
-            <img src="img/ajax-loader.gif" alt="Loading"></img>
-          </div>
+          <br class="clear" />
         </div>
 
-        <div id="label-tip"><img src="img/tip.jpg" alt="Tip"/></div>
-        <div id="label-here"><img src="img/here.jpg" alt="Here" width="40" height="192"/></div>
+        <div id="courts">
+          <div id="court-northwest" class="court light-off">
+            <div class="court-content">
+              <p>WEST COURT TOP</p>
+              <div class="switch"></div>
+              <div class="court-img"></div>
+            </div>
+            <div id="loader-northwest" class="loader">
+              <p>WORKING......</p>
+              <img src="img/loader.gif" alt="loader" />
+            </div>
+          </div>
+          
+          <div id="court-northeast" class="court light-off">
+            <div class="court-content">
+              <p>EAST COURT TOP</p>
+              <div class="switch"></div>
+              <div class="court-img"></div>
+            </div>
+            <div id="loader-northeast" class="loader">
+              <p>WORKING......</p>
+              <img src="img/loader.gif" alt="loader" />
+            </div>
+          </div>
+          
+          <div id="court-southwest" class="court light-off">
+            <div class="court-content">
+              <p>WEST COURT BOT</p>
+              <div class="switch"></div>
+              <div class="court-img"></div>
+            </div>
+            <div id="loader-southwest" class="loader">
+              <p>WORKING......</p>
+              <img src="img/loader.gif" alt="loader" />
+            </div>
+          </div>
+          
+          <div id="court-southeast" class="court light-off">
+            <div class="court-content">
+              <p>EAST COURT BOT</p>
+              <div class="switch"></div>
+              <div class="court-img"></div>
+            </div>
+            <div id="loader-southeast" class="loader">
+              <p>WORKING......</p>
+              <img src="img/loader.gif" alt="loader" />
+            </div>
+          </div>
+          
+          <br class="clear" />
+        </div>
       </div>
 
       <div id="footer">
-        <h1>Touch Area on Screen To Turn ON Lights</h1>
       </div>
     </div>
   </body>

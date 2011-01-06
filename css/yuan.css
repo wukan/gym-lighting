@@ -12,82 +12,160 @@ a:hover {
 body {
     background:#FFF;
 }
-#container {
+.clear {
+    clear:both;
+}
+#wrapper {
     font-family:Vrinda, Arial, Helveticam, sans-serif;
-    text-align:center;
-    color:#330000;
-    width:960px;
+    width:1280px;
+    height: 800px;
     margin:0 auto;
+    background: url(../img/background.jpg) no-repeat;
 }
 #header {
-    margin-bottom:10px;
-    padding:10px inherit;
+    background: url(../img/header.png) no-repeat;
+    height: 53px;
 }
 #content {
     margin:0 auto;
+    margin-top: 50px;
     position:relative;
 }
+#tips {
+    width:880px;
+    height:120px;
+    margin:0 auto;
+    background-color:#000;
+    -webkit-border-radius:10px;
+}
+#tips-header {
+    float:left;
+    width:180px;
+    background-color:#0f1211;
+    -webkit-border-radius:10px;
+    text-align:center;
+    font-size: 22px;
+    color:#a8e071;
+    line-height:120px;
+}
+#tips-content {
+    float:left;
+    width:700px;
+    height:inherit;
+    -webkit-border-radius:10px;
+    color:#a3a3a3;
+    line-height:30px;
+}
+#tips-content ol {
+    padding-top:10px;
+    padding-left:60px;
+}
+#tips-content span {
+    color:#a2ff00;
+    font-style:italic;
+}
 #courts {
-    width:600px;
-    position:relative;
-    margin:auto;
-    padding-left:30px;
+    width:928px;
+    margin:0 auto; 
+    padding-top:16px;
 }
 .court {
     float:left;
-    border:solid 1px gray;
-    width:280px;
-    height:268px;
+    width:440px;
+    height:230px;
+    margin-top:16px;
+    margin-left:16px;
+    overflow:hidden;
+    position:relative;
+}
+.court-content {
+    height:170px;
+    margin:30px;
+    position:relative;
+}
+.court-content p {
+    position:absolute;
+    left:20px;
+    top:20px;
+    font-size:16px;
+    font-weight:bold;
+}
+.switch {
+    width:149px;
+    height:85px;
+    position:absolute;
+    left:10px;
+    top:54px;
+}
+.court-img {
+    width:214px;
+    height:172px;
+    position:absolute;
+    left:172px;
 }
 .light-off {
-    background-position:0 0;
+    background-image:url(../img/inactive.png);
+    background-repeat:no-repeat; 
+}
+.light-off .court-content p {
+    color:#464646;
+}
+.light-off .switch {
+    background-image:url(../img/switchoff.png);
+    background-repeat:no-repeat;
+}
+#court-northwest[class~="light-off"] .court-img,
+#court-northeast[class~="light-off"] .court-img {
+    background-image:url(../img/courtoff_top.png);
+    background-repeat:no-repeat;
+}
+#court-southwest[class~="light-off"] .court-img,
+#court-southeast[class~="light-off"] .court-img {
+    background-image:url(../img/courtoff_bot.png);
+    background-repeat:no-repeat;
 }
 .light-on {
-    background-position:-280px 0;
-}
-#court-northwest {
-    background-image:url(../img/northwest-court.png);
+    background-image:url(../img/active.png);
     background-repeat:no-repeat;
 }
-#court-southwest {
-    background-image:url(../img/southwest-court.png);
+.light-on .court-content p {
+    color:#a2ff00;
+}
+.light-on .switch {
+    background-image:url(../img/switchon.png);
     background-repeat:no-repeat;
 }
-#court-northeast {
-    background-image:url(../img/northeast-court.png);
+#court-northwest[class~="light-on"] .court-img,
+#court-northeast[class~="light-on"] .court-img {
+    background-image:url(../img/courton_top.png);
     background-repeat:no-repeat;
 }
-#court-southeast {
-    background-image:url(../img/southeast-court.png);
+#court-southwest[class~="light-on"] .court-img,
+#court-southeast[class~="light-on"] .court-img {
+    background-image:url(../img//courton_bot.png);
     background-repeat:no-repeat;
 }
 .loader {
+    width:380px;
+    height:170px;
+    margin:30px;
+    background-color:#171717;
     position:absolute;
+    left:0;
+    top:0;
     display:none;
 }
-.loader img{
-    width:160%;
-}
-#loader-northwest {
-    left:120px;
-    top:60px;
-}
-#loader-northeast {
-    left:400px;
-    top:60px;
-}
-#loader-southwest {
-    left:120px;
-    top:340px;
-}
-#loader-southeast {
-    left:400px;
-    top:340px;
-}
-#label-tip {
+.loader p {
+    color:#858585;
+    font-weight:bold;
     position:absolute;
-    margin-left:0px;
-    /*display:none;*/
+    left:140px;
+    top:36px;
+}
+.loader img {
+    position:absolute;
+    left:127px;
+    top:74px;
 }
 #label-here {
     position:absolute;
@@ -95,8 +173,10 @@ body {
     margin-left:760px;
 }
 #footer {
-    margin-top:10px;
-    padding:10px inherit;
     clear:both;
+    margin:0 auto;
+    background-image:url(../img/footer.png);
+    width:447px;
+    height:54px;
 }
 
