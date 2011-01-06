@@ -167,10 +167,13 @@ body {
     left:127px;
     top:74px;
 }
-#label-here {
+#here {
+    background-image:url(../img/here.png);
+    width:145px;
+    height:51px;
     position:absolute;
-    margin-top:360px;
-    margin-left:760px;
+    top:592px;
+    left:1000px;
 }
 #footer {
     clear:both;
