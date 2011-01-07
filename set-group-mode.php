@@ -2,6 +2,8 @@
   session_start();
   require_once('api.php');
 
+  define("INTERVAL", 30);
+
   if (!isset($_REQUEST['group_name'])) {
     echo 'parameter "group_name" missing';
   } else if (!isset($_REQUEST['mode'])) {
@@ -11,7 +13,7 @@
     $mode = trim($_REQUEST['mode']);
 
     $now = time();
-    if (isset($_SESSION[$group_name]) && (($now - $_SESSION[$group_name]) < 60)) {
+    if (isset($_SESSION[$group_name]) && (($now - $_SESSION[$group_name]) < INTERVAL)) {
       // something happens here to prevent calling SetGroupMode
       header('Content-Type: application/json');
       echo json_encode(2);
