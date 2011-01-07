@@ -18,7 +18,7 @@
           <div id="tips-content">
             <ol>
               <li>Turning lights on/off can take a bit of the time.</li>
-              <li>Wait a <span>1 minute</span> between operations on the same lights.</li>
+              <li>Wait <span>30s</span> between operations on the same lights.</li>
               <li>Questions? Ask us at <span>xx@dartmouth.edu</span>.</li>
             </ol>
           </div>
@@ -36,6 +36,9 @@
               <p>WORKING......</p>
               <img src="img/loader.gif" alt="loader" />
             </div>
+            <div id="error-northwest" class="error">
+              <p>please wait 30s for next operation</p>
+            </div>
           </div>
           
           <div id="court-northeast" class="court light-off">
@@ -47,6 +50,9 @@
             <div id="loader-northeast" class="loader">
               <p>WORKING......</p>
               <img src="img/loader.gif" alt="loader" />
+            </div>
+            <div id="error-northeast" class="error">
+              <p>please wait 30s for next operation</p>
             </div>
           </div>
           
@@ -60,6 +66,9 @@
               <p>WORKING......</p>
               <img src="img/loader.gif" alt="loader" />
             </div>
+            <div id="error-southeast" class="error">
+              <p>please wait 30s for next operation</p>
+            </div>
           </div>
           
           <div id="court-southeast" class="court light-off">
@@ -71,6 +80,9 @@
             <div id="loader-southeast" class="loader">
               <p>WORKING......</p>
               <img src="img/loader.gif" alt="loader" />
+            </div>
+            <div id="error-southwest" class="error">
+              <p>please wait 30s for next operation</p>
             </div>
           </div>
           

@@ -15,8 +15,9 @@
     $now = time();
     if (isset($_SESSION[$group_name]) && (($now - $_SESSION[$group_name]) < INTERVAL)) {
       // something happens here to prevent calling SetGroupMode
+      $waiting = INTERVAL - ($now - $_SESSION[$group_name]);
       header('Content-Type: application/json');
-      echo json_encode(2);
+      echo json_encode(array('error' => 1, 'waiting' => $waiting));
     } else {
       $result = callApi('SetGroupMode',
                          array('GroupName' => $group_name,
@@ -25,7 +26,7 @@
 
       header('Content-Type: application/json');
       if ($result == 'Success!') {
-        echo json_encode(1);
+        echo json_encode(array('success' => 1));
         // update the previous update time
         $_SESSION[$group_name] = $now;
       } else {

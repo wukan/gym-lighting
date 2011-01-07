@@ -22,31 +22,8 @@ $(document).ready(function() {
 
         if (group_name != '' && mode != '-1') {
             // Set group's lights' status 
-            set_group_mode(group_name, mode);
+            set_group_mode(group_name, mode, $(this).attr('id'));
         }
-        
-        if ($(this).attr('id') == 'court-northwest') {
-            $('#court-northwest').fadeTo(400, 0.5); 
-            $('#loader-northwest').fadeIn();
-            setTimeout('$("#loader-northwest").fadeOut()', 3000);
-            setTimeout('$("#court-northwest").fadeTo(400, 1)', 3000);
-        } else if ($(this).attr('id') == 'court-northeast') {
-            $('#court-northeast').fadeTo(400, 0.5);
-            $('#loader-northeast').fadeIn();
-            setTimeout('$("#loader-northeast").fadeOut()', 3000);
-            setTimeout('$("#court-northeast").fadeTo(400, 1)', 3000);
-        } else if ($(this).attr('id') == 'court-southwest') {
-            $('#court-southwest').fadeTo(400, 0.5);
-            $('#loader-southwest').fadeIn();
-            setTimeout('$("#loader-southwest").fadeOut()', 3000);
-            setTimeout('$("#court-southwest").fadeTo(400, 1)', 3000);
-        } else if ($(this).attr('id') == 'court-southeast') {
-            $('#court-southeast').fadeTo(400, 0.5);
-            $('#loader-southeast').fadeIn();
-            setTimeout('$("#loader-southeast").fadeOut()', 3000);
-            setTimeout('$("#court-southeast").fadeTo(400, 1)', 3000);
-        } 
-
     });
 
     check_all_lighting_status();
@@ -64,13 +41,69 @@ function check_all_lighting_status() {
 function set_group_mode(group_name, mode, group_id) {
     var params = {'group_name': group_name, 'mode': mode};
     $.get('set-group-mode.php', params, function(response) {
-        // if fail something will happens here
-        /*
-        if (response == 0) {
+        if ("error" in response) {
+          if (response['error'] == '1') {
+            var waiting = response['waiting'].toString();
+            /*
+            var $court = $('#' + group_id);
+            var $error = $('#error' + group_id.slice(5));
             
-        } else if (response == 2) [
+            $court.fadeTo(400, 0.5);
+            $error.fadeIn(); 
+            setTimeout('$error.fadeOut()', 3000);
+            setTimeout('$court.fadeTo(400, 1)', 3000);
+            */
 
-        }*/
+            if (group_id == 'court-northwest') {
+              $('#court-northwest').fadeTo(400, 0.5);
+              $('#error-northwest').fadeIn();
+              $('#error-northwest > p').text('please wait ' + waiting + 's for next operation');
+              setTimeout('$("#error-northwest").fadeOut()', 3000);
+              setTimeout('$("#court-northwest").fadeTo(400, 1)', 3000);
+            } else if (group_id == 'court-northeast') {
+              $('#court-northeast').fadeTo(400, 0.5);
+              $('#error-northeast').fadeIn();
+              $('#error-northeast > p').text('please wait ' + waiting + 's for next operation');
+              setTimeout('$("#error-northeast").fadeOut()', 3000);
+              setTimeout('$("#court-northeast").fadeTo(400, 1)', 3000);
+            } else if (group_id == 'court-southwest') {
+              $('#court-southwest').fadeTo(400, 0.5);
+              $('#error-southwest').fadeIn();
+              $('#error-southwest > p').text('please wait ' + waiting + 's for next operation');
+              setTimeout('$("#error-southwest").fadeOut()', 3000);
+              setTimeout('$("#court-southwest").fadeTo(400, 1)', 3000);
+            } else if (group_id == 'court-southeast') {
+              $('#court-southeast').fadeTo(400, 0.5);
+              $('#error-southeast').fadeIn();
+              $('#error-southeast > p').text('please wait ' + waiting + 's for next operation');
+              setTimeout('$("#error-southeast").fadeOut()', 3000);
+              setTimeout('$("#error-southeast").fadeTo(400, 1)', 3000);
+            }
+          }
+        } else {
+          if (group_id == 'court-northwest') {
+            $('#court-northwest').fadeTo(400, 0.5); 
+            $('#loader-northwest').fadeIn();
+            setTimeout('$("#loader-northwest").fadeOut()', 3000);
+            setTimeout('$("#court-northwest").fadeTo(400, 1)', 3000);
+          } else if (group_id == 'court-northeast') {
+            $('#court-northeast').fadeTo(400, 0.5);
+            $('#loader-northeast').fadeIn();
+            setTimeout('$("#loader-northeast").fadeOut()', 3000);
+            setTimeout('$("#court-northeast").fadeTo(400, 1)', 3000);
+          } else if (group_id == 'court-southwest') {
+            $('#court-southwest').fadeTo(400, 0.5);
+            $('#loader-southwest').fadeIn();
+            setTimeout('$("#loader-southwest").fadeOut()', 3000);
+            setTimeout('$("#court-southwest").fadeTo(400, 1)', 3000);
+          } else if (group_id == 'court-southeast') {
+            $('#court-southeast').fadeTo(400, 0.5);
+            $('#loader-southeast').fadeIn();
+            setTimeout('$("#loader-southeast").fadeOut()', 3000);
+            setTimeout('$("#court-southeast").fadeTo(400, 1)', 3000);
+          } 
+          ; 
+        }
     });
 }
 
