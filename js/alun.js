@@ -77,7 +77,7 @@ function set_group_mode(group_name, mode, group_id) {
               $('#error-southeast').fadeIn();
               $('#error-southeast > p').text('please wait ' + waiting + 's for next operation');
               setTimeout('$("#error-southeast").fadeOut()', 3000);
-              setTimeout('$("#error-southeast").fadeTo(400, 1)', 3000);
+              setTimeout('$("#court-southeast").fadeTo(400, 1)', 3000);
             }
           }
         } else {
