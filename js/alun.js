@@ -5,13 +5,13 @@ $(document).ready(function() {
         var group_name = '';
         var mode = '-1';
         if ($(this).attr('id') == 'court-northwest') {
-            group_name = 'KanNorthwestLights';          
+            group_name = 'NorthwestLights';          
         } else if ($(this).attr('id') == 'court-northeast') {
-            group_name = 'KanNortheastLights';
+            group_name = 'NortheastLights';
         } else if ($(this).attr('id') == 'court-southwest') {
-            group_name = 'KanSouthwestLights';
+            group_name = 'SouthwestLights';
         } else if ($(this).attr('id') == 'court-southeast') {
-            group_name = 'KanSoutheastLights';
+            group_name = 'SoutheastLights';
         } 
 
         if ($(this).hasClass('light-off')) {
@@ -31,10 +31,10 @@ $(document).ready(function() {
 
 function check_all_lighting_status() {
     // check northwest court
-    setTimeout("check_group_lighting_status('KanNorthwestLights', '#court-northwest')", 500);
-    setTimeout("check_group_lighting_status('KanNortheastLights', '#court-northeast')", 1000);
-    setTimeout("check_group_lighting_status('KanSouthwestLights', '#court-southwest')", 1500);
-    setTimeout("check_group_lighting_status('KanSoutheastLights', '#court-southeast')", 2000);
+    setTimeout("check_group_lighting_status('NorthwestLights', '#court-northwest')", 500);
+    setTimeout("check_group_lighting_status('NortheastLights', '#court-northeast')", 1000);
+    setTimeout("check_group_lighting_status('SouthwestLights', '#court-southwest')", 1500);
+    setTimeout("check_group_lighting_status('SoutheastLights', '#court-southeast')", 2000);
     setTimeout("check_all_lighting_status()", 2500);
 }
 

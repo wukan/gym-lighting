@@ -7,7 +7,7 @@ $(document).ready(function() {
 function get_all_lighting_status() {
     if (ajax)
        ajax.abort();
-    var params = {'group_name': 'KanAllLights'};
+    var params = {'group_name': 'AllLights'};
     ajax = $.get('get-group-devices-statuses.php', params, function(response) {
         for (var i = 0; i < 36; i += 1) {
             var light_status = response[i][1];

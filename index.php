@@ -24,7 +24,7 @@
               <li>Wait <span>30s</span> between operations on same lights</li>
               <li>Lights remain on while you use the count</li>
               <li>Please turn off lights when done</li>
-              <li>Questions? Ask us at <span>xx@dartmouth.edu</span>.</li>
+              <li>Questions? Ask us at <span>Kan.Wu@dartmouth.edu</span></li>
             </ol>
           </div>
           <br class="clear" />
