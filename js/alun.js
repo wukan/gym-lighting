@@ -15,7 +15,7 @@ $(document).ready(function() {
         } 
 
         if ($(this).hasClass('light-off')) {
-            mode = '3';
+            mode = '1';
         } else {
             mode = '0';
         }
@@ -113,7 +113,7 @@ function check_group_lighting_status(group_name, group_id) {
         var group_lighting_status = true;
         var light_status;
         for (i in response) {
-            if (response[i][1] != '3') {
+            if (response[i][1] == '0') {
                 group_lighting_status = false;
                 break;
             }

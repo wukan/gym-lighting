@@ -1,7 +1,7 @@
 <?php
   define('BASE_URL', 'https://www.corisecs.com/GUI.php');
   define('USER', 'Dartmouth-westgym');
-  define('PASS', 'dartmouth');
+  define('PASS', 'lighting');
 
   function callApi($func, $params = array()) {
     $uri = BASE_URL . '?Function=' . $func;
