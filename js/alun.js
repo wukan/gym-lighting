@@ -26,6 +26,10 @@ $(document).ready(function() {
         }
     });
 
+    $('#tips-header').click(function() {
+        window.location.reload();
+    });
+
     check_all_lighting_status();
     setInterval('flash_text()', 2500);
 });
