@@ -27,15 +27,16 @@ $(document).ready(function() {
     });
 
     check_all_lighting_status();
+    setInterval('flash_text()', 2500);
 });
 
 function check_all_lighting_status() {
     // check northwest court
-    setTimeout("check_group_lighting_status('NorthwestLights', '#court-northwest')", 500);
-    setTimeout("check_group_lighting_status('NortheastLights', '#court-northeast')", 1000);
-    setTimeout("check_group_lighting_status('SouthwestLights', '#court-southwest')", 1500);
-    setTimeout("check_group_lighting_status('SoutheastLights', '#court-southeast')", 2000);
-    setTimeout("check_all_lighting_status()", 2500);
+    check_group_lighting_status('NorthwestLights', '#court-northwest');
+    check_group_lighting_status('NortheastLights', '#court-northeast');
+    check_group_lighting_status('SouthwestLights', '#court-southwest');
+    check_group_lighting_status('SoutheastLights', '#court-southeast');
+    setTimeout("check_all_lighting_status()", 2000);
 }
 
 function set_group_mode(group_name, mode, group_id) {
@@ -44,16 +45,7 @@ function set_group_mode(group_name, mode, group_id) {
         if ("error" in response) {
           if (response['error'] == '1') {
             var waiting = response['waiting'].toString();
-            /*
-            var $court = $('#' + group_id);
-            var $error = $('#error' + group_id.slice(5));
             
-            $court.fadeTo(400, 0.5);
-            $error.fadeIn(); 
-            setTimeout('$error.fadeOut()', 3000);
-            setTimeout('$court.fadeTo(400, 1)', 3000);
-            */
-
             if (group_id == 'court-northwest') {
               $('#court-northwest').fadeTo(400, 0.5);
               $('#error-northwest').fadeIn();
@@ -121,10 +113,32 @@ function check_group_lighting_status(group_name, group_id) {
         if (group_lighting_status) {
             $(group_id).removeClass('light-off');
             $(group_id).addClass('light-on');
+            $(group_id + ' p.court-text').text('DO NOT FORGET TO TURN OFF');
         } else {
             $(group_id).removeClass('light-on');
             $(group_id).addClass('light-off');
+            $(group_id + ' p.court-text').text('TOUCH TO TURN ON');
         }
     });
+}
+
+function flash_text() {
+    if ($('#court-northwest').hasClass('light-on')) {
+        $('#court-northwest p.court-text').fadeTo(750, 0.3);
+        setTimeout("$('#court-northwest p.court-text').fadeTo(750, 1)", 1000);
+    }
+    if ($('#court-northeast').hasClass('light-on')) {
+        $('#court-northeast p.court-text').fadeTo(750, 0.3);
+        setTimeout("$('#court-northeast p.court-text').fadeTo(750, 1)", 1000);
+    }
+    if ($('#court-southwest').hasClass('light-on')) {
+        $('#court-southwest p.court-text').fadeTo(750, 0.3);
+        setTimeout("$('#court-southwest p.court-text').fadeTo(750, 1)", 1000);
+    }
+    if ($('#court-southeast').hasClass('light-on')) {
+        $('#court-southeast p.court-text').fadeTo(750, 0.3);
+        setTimeout("$('#court-southeast p.court-text').fadeTo(750, 1)", 1000);
+    }
+
 }
 

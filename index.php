@@ -33,7 +33,7 @@
         <div id="courts">
           <div id="court-northwest" class="court top light-off">
             <div class="court-content">
-              <p>WEST COURT TOP</p>
+              <p class="court-text"></p>
               <div class="court-img"></div>
               <div class="switch"></div>
             </div>
@@ -48,7 +48,7 @@
           
           <div id="court-northeast" class="court top light-off">
             <div class="court-content">
-              <p>EAST COURT TOP</p>
+              <p class="court-text"></p>
               <div class="court-img"></div>
               <div class="switch"></div>
             </div>
@@ -65,7 +65,7 @@
             <div class="court-content">
               <div class="court-img"></div>
               <div class="switch"></div>
-              <p>WEST COURT BOT</p>
+              <p class="court-text"></p>
             </div>
             <div id="loader-southwest" class="loader">
               <p>WORKING......</p>
@@ -80,7 +80,7 @@
             <div class="court-content">
               <div class="court-img"></div>
               <div class="switch"></div>
-              <p>EAST COURT BOT</p>
+              <p class="court-text"></p>
             </div>
             <div id="loader-southeast" class="loader">
               <p>WORKING......</p>
