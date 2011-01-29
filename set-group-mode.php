@@ -2,7 +2,7 @@
   session_start();
   require_once('api.php');
 
-  define("INTERVAL", 30);
+  define("INTERVAL", 15);
 
   if (!isset($_REQUEST['group_name'])) {
     echo 'parameter "group_name" missing';
